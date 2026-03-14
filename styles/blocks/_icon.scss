@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &::after {
+    --size: #{rem(24)};
+
+    @include square(var(--size));
+
+    content: '';
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../icons/arrow.svg");
+    width: 20px;
+    aspect-ratio: 1;
+  }
+
+}

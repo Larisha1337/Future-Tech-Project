@@ -10,6 +10,7 @@ $mobile-s: 480.98;
     @content;
   }
 }
+
 @mixin laptop {
   @media (width <= rem($laptop)) {
     @content;
@@ -17,49 +18,53 @@ $mobile-s: 480.98;
 }
 
 @mixin tablet-above {
-  @media (width > rem($laptop)) {
+  @media (width > rem($tablet)) {
     @content;
   }
 }
+
 @mixin tablet {
-  @media (width <= rem($laptop)) {
+  @media (width <= rem($tablet)) {
     @content;
   }
 }
 
 @mixin mobile-above {
-  @media (width > rem($laptop)) {
+  @media (width > rem($mobile)) {
     @content;
   }
 }
+
 @mixin mobile {
-  @media (width <= rem($laptop)) {
+  @media (width <= rem($mobile)) {
     @content;
   }
 }
 
 @mixin mobile-s-above {
-  @media (width > rem($laptop)) {
+  @media (width > rem($mobile-s)) {
     @content;
   }
 }
+
 @mixin mobile-s {
-  @media (width <= rem($laptop)) {
+  @media (width <= rem($mobile-s)) {
     @content;
   }
 }
 
 @mixin hover($hasActiveEffectOnMobile: true) {
- @media (any-hover: hover) {
-   &:hover {
-     @content;
-   }
- }
-  @if ($hasActiveEffectOnMobile) {
-  @media (any-hover: none) {
-            &:active {
-             @content;
-            }
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
   }
-}
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
 }
