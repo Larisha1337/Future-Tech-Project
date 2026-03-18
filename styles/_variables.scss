@@ -9,6 +9,12 @@
   --color-dark-20: #333333;
   --color-dark-40: #666666;
 
+  --gradient:   linear-gradient(
+                  45deg,
+                  var(--color-dark-15) 64%,
+                  var(--color-accent) 136%
+  );
+
   --color-gray-50: #7E7E81;
  --color-gray-60: #98989A;
 
